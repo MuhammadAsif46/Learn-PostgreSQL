@@ -30,8 +30,5 @@ This repository covers a variety of fundamental and advanced PostgreSQL topics, 
 - All topics are explained with **simple and clear examples** to facilitate easy learning.
 - Focus on practical implementation to solidify concepts.
 
-## Contribution
-Feel free to explore and contribute by suggesting improvements or sharing your own PostgreSQL tips!
-
 ---
 
