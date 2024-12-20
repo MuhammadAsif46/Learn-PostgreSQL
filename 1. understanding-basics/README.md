@@ -46,4 +46,3 @@ Below are some popular databases:
 
 This guide serves as a foundation for understanding databases and their management systems. Dive deeper into the repository for practical examples and detailed explanations!
 
-Happy Learning! 😊
