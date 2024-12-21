@@ -1,4 +1,6 @@
-# Using SQL Shell and Command Line for PostgreSQL
+# Using PostgreSQL on Windows
+
+## Using SQL Shell and Command Line for PostgreSQL
 
 This guide explains how to interact with PostgreSQL using the SQL Shell (psql) and the command line interface. It also provides tips for setting up the environment for seamless usage.
 
@@ -62,4 +64,9 @@ After setting up the environment variables:
 ---
 
 This guide covers essential commands and setup tips to help you efficiently use PostgreSQL via the SQL Shell or command line. Explore and practice these commands for a smoother database management experience.
+
+
+
+
+
 
