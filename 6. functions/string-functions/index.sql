@@ -53,5 +53,6 @@
 - POSITION:
   SELECT POSITION('l' IN 'Hello World!') AS Position;
 
--- - STRING_AGG:
+- STRING_AGG:
+  SELECT STRING_AGG(DISTINCT dept, ', ') AS department_list FROM employees;
 
