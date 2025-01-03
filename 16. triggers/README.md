@@ -57,7 +57,7 @@ EXECUTE FUNCTION set_created_at();
 
 ```
 
-2. **Trigger** to Log Changes on Update
+2. **Trigger**: to Log Changes on Update
 ```sql
 CREATE OR REPLACE FUNCTION log_salary_changes()
 RETURNS TRIGGER AS $$
@@ -75,7 +75,7 @@ EXECUTE FUNCTION log_salary_changes();
 
 ```
 
-3. *Trigger* to Prevent Deletion of Records
+3. **Trigger**: to Prevent Deletion of Records
 ```sql
 CREATE OR REPLACE FUNCTION prevent_deletion()
 RETURNS TRIGGER AS $$
@@ -92,7 +92,7 @@ EXECUTE FUNCTION prevent_deletion();
 
 ```
 
-4. *Trigger* for Auditing Changes
+4. **Trigger**: for Auditing Changes
 
 ```sql
 CREATE OR REPLACE FUNCTION audit_changes()
