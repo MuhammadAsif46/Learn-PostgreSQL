@@ -33,3 +33,46 @@ $$;
 
 -- call procedure: name (update_emp_salary)
 CALL add_employee("Ali", "Raza", "aliraza@gmail.com", "IT", "94000")
+
+
+-- using sub query: 1st way
+SELECT 
+    e.emp_id,
+    e.fname,
+    e.salary,
+    FROM employee e
+    WHERE e.dept = 'HR'
+    AND e.salary = (
+        SELECT MAX(salary)
+        FROM employees
+        WHERE dept = 'HR'
+    );
+
+
+2. using USER Defined FUNCTION:   2nd way (dynamic)
+
+CREATE OR REPLACE FUNCTION dept_max_sal_emp1(dept_name VARCHAR)
+RETURNS TABLE(emp_id INT, fname VARCHAR, salary NUMERIC) 
+AS $$
+BEGIN
+    RETURN QUERY
+    SELECT 
+        e.emp_id,  e.fname, e.salary
+    FROM 
+        employees e
+    WHERE 
+        e.dept = dept_name
+        AND e.salary = (
+            SELECT MAX(emp.salary)
+            FROM employees emp
+            WHERE emp.dept = dept_name
+        );
+END;
+$$ LANGUAGE plpgsql;
+
+
+-- call function: dept_max_sal_emp1('HR')
+SELECT * FROM dept_max_sal_emp1('HR');
+SELECT * FROM dept_max_sal_emp1('IT');
+SELECT * FROM dept_max_sal_emp1('Marketing');
+SELECT * FROM dept_max_sal_emp1('Finance');
